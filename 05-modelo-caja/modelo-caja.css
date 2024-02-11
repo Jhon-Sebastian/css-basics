@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+/*
+    Como Span es tipo Linea
+    Asi se le agrege las propiedas width / height, no se van
+    a aplicar ya que los elementos en linea no tienen esos atributos
+    ya que se comportan como texto
+*/
+span {
+  /*display: inline; /*Por defecto*/
+  display: block;
+  background-color: red;
+  width: 500px;
+  height: 100px;
+}
+
+.container {
+  width: 250px;
+  height: 250px;
+  background-color: #09f;
+  border: 1px solid #000;
+}
+
+/*
+    Propiedades de la caja
+    [margin, padding, border]
+    * paddign & border afectan el tamanio de la caja
+    * El margin no afecta el tamanio de la caja
+
+    Esto debido a esta propieda por defecto
+    box-sizing: content-box
+
+    Esto ocasio que se tiene un alto y ancho de 100px con los cambios en el padding y border pueda aumentar a ejemplo = 140px
+    
+    Para evitar esto y que el maximo sea 100px y el padding y border tomen lo necesario de ahi sin afectar ese maximo
+*/
+.section-block {
+  width: 250px;
+  height: 250px;
+  background-color: green;
+  border: 1px solid #000;
+  padding: 16px 45px;
+  box-sizing: border-box;
+}

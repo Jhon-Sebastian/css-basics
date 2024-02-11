@@ -1,0 +1,51 @@
+/*
+    >>> DESBORDAMIENTO <<<
+
+    Ocurre porque la caja tiene un tamaño fijo y el texto es muy grande
+
+    [visible] --> Default value
+    `Contenido sin recortar`
+    overflow: visible;
+
+    [hidden] 
+    `Si recorta contenido`
+    overflow: hidden;
+
+    [scroll] 
+    `Recorta contenido con barras de desplazamiento`
+    overflow: scroll;
+
+    [auto] 
+    `Dependiendo del navegador-dispositivo pone scroll o el que sea necesario`
+    overflow: auto;
+
+    >>> En caso de color overflow: hidden, se puede agregar como se quiere evitar que se vea la info <<<
+
+    text-overflow: ellipsis; --> ...
+
+*/
+
+.container{
+    width: 150px;
+    height: 150px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+h2{
+    margin: 50px 0 20px 0;
+}
+
+h1{
+    color: rgb(117, 15, 15);
+}
+
+body{
+    background: #09f;
+    margin: 0;
+    font-family: system-ui;
+}

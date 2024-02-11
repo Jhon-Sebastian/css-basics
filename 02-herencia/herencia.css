@@ -1,0 +1,20 @@
+article {
+  color: red;
+}
+
+.container {
+  color: #09f;
+  font-size: 32px;
+  border: 3px solid #09f;
+}
+
+.child {
+  /* Valores especiales de Herencia
+    initial = Valor definido por css
+    unset = Resetear el valor a original
+    revert = Revertir el valor de inherit = Heredar valor el padre
+  */
+  border: inherit;
+  font-size: revert;
+  /*min 41:41*/
+}

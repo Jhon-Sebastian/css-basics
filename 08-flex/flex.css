@@ -1,0 +1,108 @@
+/*
+    [DISPLAY: FLEX]
+
+    Se coloca en el contenedor que los envuelve.
+
+    La direccion del contenido por defecto es en fila
+
+    [FLEX-DIRECTION]
+
+    *flex-direction: row; --> default
+    *flex-direction: column; --> 
+
+    Si no se indica el valor por defecto es en fila(row).
+
+    [DIRECTION]
+    Indica la direccion de lectura
+
+    left to rigth
+    direction: ltr --> default
+    direction: rtl
+
+    [WRITING-MODE]
+    Indica la direccion de lectura
+    writing-mode: sideways-lr; --> default
+    writing-mode: vertical-lr ; --> default
+
+    [FLEX-WRAP]
+    Aplica para casos cuando no hay suficiente espacion para los elementos,
+    con eso evita que haga un salto de linea para que queda el contenido, todo con
+    esto con ""nowrap""
+    flex-wrap: nowrap; --> default
+
+    Da la posibilidad de que si no cabe
+    realice un salto de linea
+    flex-wrap: wrap; --> default
+
+
+    [HACER PARA QUE LOS ELEMENTOS OCUPEN TODO EL ESPACION DEL CONTENEDOR]
+
+    *VALORES DEFECTO*
+    flex-grow: 0 --> los elementos no crecen
+    flex-shrink: 1 --> los elementos pueden reducir su tamaño a uno mas peqqueño
+    que su flex-basis
+    flex-basis: auto --> los elementos tiene un tamaño base de auto
+
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto; Tamaño base
+
+    IGUAL A =====
+
+    Abreviacion
+    flex: 1
+
+*/
+
+.parent {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 4px solid #000;
+  width: 250px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 16px;
+}
+
+.item {
+  border: 1px solid;
+  opacity: 0.9;
+  box-sizing: border-box;
+  background: #09f;
+  width: 50px;
+  height: 50px;
+}
+
+/*
+    [HACER PARA QUE EL 1 TENGA EL DOBLE DE ANCHO QUE LOS OTROS]
+    
+*/
+
+.item:first-child {
+  background: yellow;
+  /*
+    flex: 1;
+    order: 3;
+    */
+
+  /*
+    Para hacer una expecion de
+    algun elemento
+     align-self: flex-start;
+
+    */
+  align-self: flex-start;
+}
+
+.item:nth-child(2) {
+  background: blue;
+}
+
+.item:last-child {
+  background: red;
+}

@@ -1,0 +1,130 @@
+.link {
+  color: red;
+}
+
+/*
+Pseudo Clase - Estados en los que se encuentran los elementos HTML
+
+:hover --> Pasa sobre el elemento
+:active --> Cuando se hace click en un elemento o se activa
+:focus --> inputs cuando se esta escribiendo
+:first-child --> Solo el primer Hijo
+:last-child --> Ultimo hijo
+*/
+
+.link:hover {
+  color: #000;
+  background-color: yellow;
+  /*
+    Border parecido Outline
+    TODO: Border --> Afecta el contenido y da como un salto entre elementos afectando otros elementos
+
+    TODO: Outline --> Se aplica sobre encima del contenido y no cambia el ancho del elemento ni afecta a los demas
+
+    border: 5px solid red;
+    */
+  outline: 5px solid red;
+}
+
+.link:active {
+  outline: 5px solid #09f;
+}
+
+button {
+  color: #fff;
+  background-color: #09f;
+  padding: 10px 20px 20px 10px;
+  margin-left: 50px;
+  font-size: 1rem;
+  border-radius: 15%;
+  text-align: center;
+}
+
+button:active {
+  outline: 5px solid red;
+}
+
+.event-focus {
+  margin-top: 50px;
+}
+
+.input_focus:focus {
+  border: 5px solid yellow;
+}
+
+.elemento{
+    font-weight: bold;
+}
+
+.elemento:first-child{
+    color: rgb(246, 9, 49);
+}
+
+.elemento:last-child{
+    color: rgb(32, 0, 238);
+}
+
+.strong-algo{
+    margin-top: 60px;
+}
+
+.parrafo{
+    font-size: 25px;
+}
+
+/*TODO: SELECTORES COMBINADOS*/
+
+.description .bold{
+    color: #09f;
+}
+
+.secondary .bold{
+    color: red;
+}
+
+.item{
+    font-size: 25px;
+}
+
+/*
+    Puede haber mas de un elemento <p> anidados dentro de otros elementos los cuales todos se ven afectados, con el operador ">" se indica que solo al "primer nivel o Hijo directo" y no afecte a los demas
+*/
+
+article{
+    font-size: 20px;
+}
+
+article > p{
+    color: blue;
+}
+
+/*
+    Operador hermano siguiente
+
+    Un elemento que esta despues o siguiente
+
+    Serian los span que estan despues del parrafo pero contando desde cuando lo encuntre la segunda ves
+
+*/
+
+section p ~ span{
+  color: red;  
+}
+
+/*
+    > Primer hijo
+    ~ Hermano/os siguiente que encuentre despues del elemento seleccionado asi tengan elementos en medio ej: p ~ span.
+    Todos los <span> que esten despues de un <p>
+    + Hermano siguiente directo sin elementos intermediarios 
+    p + span
+*/
+
+/*
+    Por ejemplo solo se quiere agregar el espacio al segundo boton y no desde el primero
+*/
+button + button{
+    margin-left: 16px;
+}
+
+
+

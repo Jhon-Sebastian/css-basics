@@ -1,0 +1,64 @@
+p {
+  font-size: 24px;
+  font-family: system-ui;
+  color: #09f;
+  font-weight: bold;
+}
+
+p {
+  color: red;
+}
+
+p {
+  color: purple;
+}
+
+/*
+    FallBack
+
+    p{
+    color: #09f;
+    color: oklch(70% 0.1 11);/*Si no encuentra este como esta de de ultimas es mas importante va hacia el estilo de arriba mas basicos
+    }
+    
+*/
+
+
+/*
+    Especificidad
+
+    Aunque el sea un elemento <p> y esta este mas abajo, toma en cuenta la clase .text
+
+    X.Y.Z
+
+*/
+.text {
+  font-size: 24px;
+  font-family: system-ui;
+  color: #000;
+  font-weight: bold;
+}
+
+p {
+  color: purple;
+}
+
+/*
+  px --> Unidad absoluta/relativa
+  % --> Unidad absoluta del contenedor padre, de lo que esta por encima
+  v[h-w] --> 50 porciento de la actura del viewport que seria de toda la pantalla que se este mostrando
+
+  vh -> viewport height
+  vw -> viewport width
+*/
+
+.container{
+  width: 50vw;
+  height: 50vh;
+  background: green;
+}
+
+body{
+  background-color: #09f;
+  margin: 0;
+}
